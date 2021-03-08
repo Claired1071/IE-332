@@ -1,8 +1,7 @@
 <?php
 session_start();
-
 //user is not allowed to go back into the browser after logging out
-$_SESSION["log"] = 0;
+$_SESSION["active"] = 0;
 unset($_SESSION["s_email"]);
 header("Location: Student_Login.php");
 ?>
