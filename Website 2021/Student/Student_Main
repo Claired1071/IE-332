@@ -1,6 +1,6 @@
 <?php
 session_start();
-//does not allow student to use back arrow after logging out
+//user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
 	header("Location:  student_login.php");
 }
