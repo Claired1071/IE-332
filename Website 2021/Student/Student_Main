@@ -1,12 +1,10 @@
 <?php
 session_start();
 //does not allow student to use back arrow after logging out
-if ($_SESSION["log"] == 0) {
+if ($_SESSION["active"] == 0) {
 	header("Location:  student_login.php");
 }
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <!-- importing css from external file-->
@@ -35,6 +33,5 @@ if ($_SESSION["log"] == 0) {
 	<p><a href = "Student_Logout.php" class = "button1">Logout</a></p>
 	<br>
 	<p><i>Thank you for using Student Scheduler!</i></p>
-
 </body>
 </html>
