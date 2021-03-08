@@ -2,7 +2,7 @@
 session_start();
 include("new_connection.php");
 
-//does not allow back arrow to be used after logging out
+//user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
 	header("Location:  Student_Login.php");
 }
