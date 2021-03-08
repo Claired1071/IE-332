@@ -5,8 +5,8 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -45,35 +45,29 @@
 	
 	//pulling variable values from student form
 
-	$stud_email = $_POST['Email'];
-	$stud_password = $_POST['Password'];
-	$stud_fname = $_POST['Fname'];
-	$stud_lname = $_POST['Lname'];
-	$stud_phone = $_POST['Phone_Number'];
-	$stud_major = $_POST['Major'];
-	$stud_location = $_POST['Location'];
-	$stud_GPA = $_POST['GPA'];
-	$stud_experience = $_POST['Experience'];
-	$stud_courses = $_POST['Courses'];
-	$stud_year = $_POST['Year'];
-	$stud_opp = $_POST['Opportunity_Type'];
-	$stud_reloction = $_POST['Relocation'];
-	$stud_sponsorship = $_POST['Work_Sponsorship'];
-	
-	
-	//checking database to see if an email address already exists
+	$s_email = $_POST['Email'];
+	$s_password = $_POST['Password'];
+	$s_fname = $_POST['Fname'];
+	$s_lname = $_POST['Lname'];
+	$s_number = $_POST['Pnumber'];
+	$s_major = $_POST['Major'];
+	$s_GPA = $_POST['GPA'];
+	$s_courses = $_POST['Courses'];
+	$s_year = $_POST['Year'];
+		
+	//checking the database to see if an email address already exists
 	$check = mysqli_query($data_base, "SELECT * FROM Student WHERE Email = '$stud_email'");
 	if(mysqli_num_rows($check) > 0){
-		echo "This account already exists!" . "<br>" . "<br>";
+		echo "An account already exists with this email" . "<br>" . "<br>";
 	}else{
-		//inserting all of student information into database
-		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Phone_Number, Major, Location, GPA, Experience, Courses, Year, Opportunity_Type, Relocation, Work_Sponsorship)
-		VALUES('" . $stud_email . "', '" . $stud_password . "', '" . $stud_fname . "', '" . $stud_lname . "', '" . $stud_phone . "', '" . $stud_major . "', '" . $stud_location . "', '" . $stud_GPA . "', '" . $stud_experience . "', '" . $stud_courses . "', '" . $stud_year . "', '" . $stud_opp . "', '" . $stud_reloction . "', '" . $stud_sponsorship . "')";
+		//Student information stored within database
+		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Pnumber, Major, GPA, Courses, Year)
+		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_number . "', '" . $s_major . "', '" . $stud_GPA . "', '" . $stud_courses . "', '" . $stud_year . "')";
 	
-		//sending student to logging in
+		//Redirecting to Login page
 		if (mysqli_query($data_base, $sql)) {
-			echo "<p>Please login below to see your account!</p>";
-			shell_exec("Rscript /home/campus/g1116905/www/main/Project_R/matchingInputs.R");
+			echo "<p>Please login to access your account</p>";
+			shell_exec("Rscript /home/campus/g1117490/www/main/Project_R/matchingInputs.R");
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($data_base);
 		}
