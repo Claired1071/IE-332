@@ -2,25 +2,25 @@
 session_start();
 
 if ($_SESSION["log"] == 1) {
-	header("Location: student_main.php");
+	header("Location: Student_Main.php");
 }
 
 $message = "";
 
 if(count($_POST)>0) {
 	$servername = "mydb.itap.purdue.edu";
-	$username = "g1116905";
-	$password = "iegroup25";
-	$dbname = "g1116905";
+	$username = "g1117490";
+	$password = "$pring21G9!";
+	$dbname = "g1117490";
 
 	
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	$result = mysqli_query($conn,"SELECT * FROM Student WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_pass"]."'");
+	$result = mysqli_query($conn,"SELECT * FROM Student WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_password"]."'");
 	$count  = mysqli_num_rows($result);
 	if($count==0) {
-		$message = "Invalid username or password";
+		$message = "Incorrect username or password";
 	} else {
-		header("Location: student_main.php");
+		header("Location: Student_Main.php");
 		
 		$_SESSION["log"] = 1;
 
@@ -42,7 +42,7 @@ if(count($_POST)>0) {
 	<body>
 		<img class="logo" src="https://wl.mypurdue.purdue.edu/static_resources/portal/images/logo.png">
 		<div class="login-container">
-			<h2 class="title">Hello Student!</h2>
+			<h2 class="title">Hello!</h2>
 			<form action="" method = "post">
 				<div class="form">
 					<label for="s_email">Email:</label>
@@ -54,7 +54,7 @@ if(count($_POST)>0) {
 				    <input class="input" type="password" id="s_pass" name="s_pass" placeholder="Password" required>
 					<input type="checkbox" onclick="myFunction()">Show Password
 					<script>
-					<!-- java function for showing password after checking box-->
+					<!--When box checked password is shown-->
 					function myFunction() {
 						var x = document.getElementById("stud_password");
 						if (x.type === "password") {
@@ -72,7 +72,7 @@ if(count($_POST)>0) {
 			</form>
 			<p> New user? Create an account below!</p>
 			<p><a class="new-account" href="s_create.php" target="_self" >Create Account</a></p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1116905/main/mainpage.php" target="_self" >Home Page</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/mainpage.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
 </html>
