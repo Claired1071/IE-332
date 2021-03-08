@@ -2,17 +2,16 @@
 session_start();
 include("new_connection.php");
 
-//does not allow use of back arrow after logging out
-if ($_SESSION["log"] == 0) {
+//user cannot go back after logging out
+if ($_SESSION["active"] == 0) {
 	header("Location:  student_login.php");
 }
-//if there is no email, return to main
+//no pre-existing email redirects user to main page
 if ($_POST["Email"] == "") {
 	header("Location:  student_main.php");
 }
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <!-- importing css from external file-->
@@ -35,8 +34,8 @@ if ($_POST["Email"] == "") {
     </header>
 	<h1>Hello <?php echo $_POST["Fname"]; ?></h1>
 	<p>Email address: <?php echo $_POST["Email"]; ?></p>
-
 <?php
+
 //pulling changed data from student edit page 
 $stud_email = $_POST['Email'];
 $stud_password = $_POST['Password'];
