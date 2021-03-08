@@ -12,7 +12,7 @@ if ($_SESSION["log"] == 0) {
 <!-- importing css from external file-->
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="Student_Create_Profile_css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -28,8 +28,8 @@ if ($_SESSION["log"] == 0) {
       <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
     </header>
 	
-	<!-- buttons to navigate student pages-->
-	<h1>Student Main Page</h1>
+	<!-- buttons to go to other pages-->
+	<h1>Main</h1>
     <div id = "sideR">
 	<p><a href = "Student_Profile.php" class = "button1">Profile</a></p>
 	<p><a href = "Student_Logout.php" class = "button1">Logout</a></p>
