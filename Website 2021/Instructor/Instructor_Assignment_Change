@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<!-- importing css from external file-->
+
+<head>
+	<title>Student Scheduler</title>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="h1">
+      <div class="left-side">
+        <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
+        <hr class="divider">
+        <div class="page-title">
+          <p class="title-main">Student Scheduler</p>
+          <p class="title">Redefining student scheduling</p>
+        </div>
+      </div>
+      <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
+    </header>
+    <h1> Change Assignment </h1>
+    <p> Change Assignment </p>
+      <!-- changing assignment form-->
+      <form action = "Instructor_Create_Assignment.php" method="post">
+      <p><strong>Assignment Would like to change: </strong>
+        <select type = "text" name = "Exam Title">
+        </select></p>
+      <p><strong>Exam Title: </strong> <input type="text" name = "Exam Title" placeholder="Enter New Assignment Title" Required></p>
+      <p><strong>Exam Date: </strong> <input type="date" name = "Exam Date" placeholder="Enter New Assignment Date" Required></p>
+      <p><strong>Exam Time: </strong> <input type="time" name = "Exam Time" placeholder="Enter New Assignment Time" Required></p>
+      <p><strong>Exam Duration (mins): </strong> <input type="text" name = "Exam Duration (min)" placeholder="Enter New Assignment Duration" Required></p>
+      <p><strong>Suggested Study Hour for the Exam (hrs): </strong> <input type="text" name = "Suggested Study Hour for the Exam (hrs)" placeholder="Enter New Suggested Study Hour" Required></p>
+      <p><input type="submit" class = "button1" value="Change Exam" /></p>
+	</form>
+
+</body>
+</html>
+    
