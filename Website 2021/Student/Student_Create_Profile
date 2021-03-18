@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html>
 
 <!-- importing css from external file-->
@@ -6,12 +6,12 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
