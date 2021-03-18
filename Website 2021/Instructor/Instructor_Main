@@ -32,9 +32,11 @@ if ($_SESSION["log"] == 0) {
 	<h1>Instructor Main Page</h1>
     <div id = "sideR">
 	<p><a href = "instructor_profile.php" class = "button1">Profile Page</a></p>
-	<p><a href = "instructor_lecture.php" class = "button1">Company Ratings</a></p>
-	<p><a href = "instructor_assignment.php" class = "button1">Job Finder</a></p>
-	<p><a href = "student_logout.php" class = "button1">Logout</a></p>
+	<p><a href = "instructor_Create_Exam.php" class = "button1">Create Exam</a></p>
+	<p><a href = "instructor_Change_Exam.php" class = "button1">Change Exam</a></p>
+	<p><a href = "instructor_Create_Assignment.php" class = "button1">Create Assignment</a></p>
+	<p><a href = "instructor_Change_Assignment.php" class = "button1">Change Assignment</a></p>
+	<p><a href = "instructor_logout.php" class = "button1">Logout</a></p>
 	<br>
 	<p><i>Thank you for using IE Connect!</i></p>
 
