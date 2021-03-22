@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -23,7 +23,7 @@
     <h1> Change Exam </h1>
     <p> Change Exam</p>
       <!-- changing exam form-->
-      <form action = "Instructor_Create_Exam.php" method="post">
+      <form action = "Advisor_Create_Exam.php" method="post">
       <p><strong>Exam Would like to change: </strong>
         <select type = "text" name = "Exam Title">
         </select></p>
