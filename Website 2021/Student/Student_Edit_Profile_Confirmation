@@ -1,14 +1,14 @@
 <?php
 session_start();
-include("new_connection.php");
+include("Student_Connect.php");
 
 //user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
-	header("Location:  student_login.php");
+	header("Location:  Student_Login.php");
 }
 //no pre-existing email redirects user to main page
 if ($_POST["Email"] == "") {
-	header("Location:  student_main.php");
+	header("Location:  Student_Main.php");
 }
 
 ?>
@@ -68,7 +68,7 @@ if (mysqli_query($data_base,$sql)) {
 mysqli_close($data_base);
 ?>
 
-<p><a href = "student_main.php" class = "button1" >Main Page</a></p>
+<p><a href = "Student_Main.php" class = "button1" >Main Page</a></p>
 
 </body>
 </html>
