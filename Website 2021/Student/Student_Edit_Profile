@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("new_connection.php");
+include("Student_Connect.php");
 
 //user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
