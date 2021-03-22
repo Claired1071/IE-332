@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html>
 
 <!-- importing css from external file-->
@@ -6,29 +6,33 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
-      <div class="left-side">
-        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
-        <hr class="divider">
-        <div class="page-title">
-          <p class="title-main">Student Scheduler</p>
-          <p class="title">Redefining student scheduling</p>
-        </div>
       </div>
       <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
-    <h1> Feedback </h1>
-    <p> Feedback </p>
-      <!-- feedback form-->
-      <form action = "Instructor_Create_Assignment.php" method="post">
-      <p><strong>Assignment or Exam would like to give feedback: </strong>
-        <select type = "text" name = "Assignment or Exam Title">
+    <h1>Profile Creation</h1>
+    <p>Hello! Please fill in the information below to make your profile.</p>
+	<!-- creating student profile form-->
+	<form action = "Student_Create_Profile_Confirmation.php" method="post">
+        <p><strong>Email Address: </strong> <input type = "email" name = "Email" placeholder = "Enter Email Address" Required></p>
+        <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
+        <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
+        <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
+        <p><strong>Phone Number: </strong> <input type = "number" name = "Phone_Number" placeholder = "1234567890" Required></p>
+        <p><strong>Major: </strong> <input type="text" name = "Major" placeholder="Enter Major" Required></p>
+        <p><strong>GPA: </strong> <input type="text" name = "GPA" placeholder="Enter GPA" Required></p>
+        <p><strong>Courses:</strong> <input type="text" name = "Courses" placeholder="Enter Courses" Required></p>
+        <p><strong>Year:</strong>
+        <select type = "text" name = "Year">
+                <option>Freshman</option>
+                <option>Sophomore</option>
+                <option>Junior</option>
+          <option>Senior</option>
         </select></p>
-	<p><strong>Please Provide Feedback:</strong> <input type="text" name = "Feedback" placeholder="Enter Feedback" Required></p>
-	<p><input type="submit" class = "button1" value="Submit Feedback" /></p>
+        <p><input type="submit" class = "button1" value="Create Profile" /></p>
 	</form>
 </body>
 </html>
