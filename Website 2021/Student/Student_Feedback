@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
