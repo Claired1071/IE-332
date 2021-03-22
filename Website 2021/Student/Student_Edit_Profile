@@ -42,7 +42,7 @@ $result = mysqli_query($data_base,$query);
 if (mysqli_num_rows($result) > 0) {
 ?>
 
-<form action = "update.php" method="post">
+<form action = "Student_Edit_Profile_Confirmation" method="post">
 	
     <?php
     while ($row = mysqli_fetch_array($result)) {
