@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -24,7 +24,7 @@
 
       <p>Create Assignment</p>
       <!-- creating Assignment form-->
-      <form action = "Instructor_Create_Assignment.php" method="post">
+      <form action = "Advisor_Create_Assignment.php" method="post">
       <p><strong>Assignment Title: </strong> <input type="text" name = "Assignment Title" placeholder="Enter Assignment Title" Required></p>
       <p><strong>Assignment Due Date: </strong> <input type="date" name = "Assignment Due Date" placeholder="Enter Assignment Due Date" Required></p>
       <p><strong>Assignment Due Time: </strong> <input type="time" name = "Assignment Due Time" placeholder="Enter Assignment Due Time" Required></p>
