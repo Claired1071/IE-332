@@ -9,7 +9,7 @@
 	<body>
 		<img class="logo" src="https://wl.mypurdue.purdue.edu/static_resources/portal/images/logo.png">
 		<div class="login-container">
-			<h2 class="title">Hello Instructor!</h2>
+			<h2 class="title">Hello!</h2>
 			<form action="" method = "post">
 				<div class="form">
 					<label for="s_email">Email:</label>
