@@ -1,8 +1,8 @@
 <?php
 session_start();
-//does not allow student to use back arrow after logging out
+//does not allow advisor to use back arrow after logging out
 if ($_SESSION["log"] == 0) {
-	header("Location: instructor_login.php");
+	header("Location: Advisor_Login.php");
 }
 
 ?>
@@ -11,9 +11,9 @@ if ($_SESSION["log"] == 0) {
 <html>
 <!-- importing css from external file-->
 <head>
-	<title>IE Connect</title>
+	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="instructorForm.css" rel="stylesheet" type="text/css" />
+    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -21,24 +21,22 @@ if ($_SESSION["log"] == 0) {
         <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
-          <p class="title-main">IE Connect</p>
-          <p class="title">Simplifying the recruiting process</p>
+          <p class="title-main">Student Scheduler</p>
+          <p class="title">Redefining student scheduling</p>
         </div>
       </div>
       <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
     </header>
 	
-	<!-- buttons to navigate instructor pages-->
-	<h1>Instructor Main Page</h1>
+	<!-- buttons to navigate advisor pages-->
+	<h1>Main Page</h1>
     <div id = "sideR">
-	<p><a href = "instructor_profile.php" class = "button1">Profile Page</a></p>
-	<p><a href = "instructor_Create_Exam.php" class = "button1">Create Exam</a></p>
-	<p><a href = "instructor_Change_Exam.php" class = "button1">Change Exam</a></p>
-	<p><a href = "instructor_Create_Assignment.php" class = "button1">Create Assignment</a></p>
-	<p><a href = "instructor_Change_Assignment.php" class = "button1">Change Assignment</a></p>
-	<p><a href = "instructor_logout.php" class = "button1">Logout</a></p>
+	<p><a href = "Advisor_Profile.php" class = "button1">Profile Page</a></p>
+	<p><a href = "Advisor_Create_Exam.php" class = "button1">Create Exam</a></p>
+	<p><a href = "Advisor_Change_Exam.php" class = "button1">Change Exam</a></p>
+	<p><a href = "Advisor_Create_Assignment.php" class = "button1">Create Assignment</a></p>
+	<p><a href = "Advisor_Change_Assignment.php" class = "button1">Change Assignment</a></p>
+	<p><a href = "Advisor_Logout.php" class = "button1">Logout</a></p>
 	<br>
-	<p><i>Thank you for using IE Connect!</i></p>
-
 </body>
 </html>
