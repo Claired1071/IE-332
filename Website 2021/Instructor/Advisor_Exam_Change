@@ -22,6 +22,12 @@
     </header>
     <h1> Change Exam </h1>
     <p> Change Exam</p>
+    
+    <?php
+	//pulling student data from the database
+	$query = "SELECT Exam_Title FROM Exam;
+	$result = mysqli_query($data_base,$query);
+
       <!-- changing exam form-->
       <form action = "Advisor_Create_Exam.php" method="post">
       <p><strong>Exam Would like to change: </strong>
