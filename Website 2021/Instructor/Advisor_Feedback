@@ -22,6 +22,12 @@
     </header>
     <h1> Feedback </h1>
     <p> Feedback </p>
+    
+    <?php
+//pulling assignment data from the database
+$query = "SELECT Assignment_Title FROM Assignment;
+$result = mysqli_query($data_base,$query);
+
       <!-- feedback form-->
       <form action = "Advisor_Create_Assignment.php" method="post">
       <p><strong>Assignment or Exam Would like to give feedback: </strong>
