@@ -22,6 +22,12 @@
     </header>
     <h1> Change Assignment </h1>
     <p> Change Assignment </p>
+    
+    <?php
+//pulling Assignment data from the database
+$query = "SELECT Assignment_Title FROM Assignment WHERE;
+$result = mysqli_query($data_base,$query);
+
       <!-- changing assignment form-->
       <form action = "Advisor_Create_Assignment.php" method="post">
       <p><strong>Assignment Would like to change: </strong>
