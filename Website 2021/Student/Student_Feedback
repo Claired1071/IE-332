@@ -23,7 +23,7 @@
     <h1> Feedback </h1>
     <p> Feedback </p>
       <!-- feedback form-->
-      <form action = "Instructor_Create_Assignment.php" method="post">
+      <form action = "Advisor_Create_Assignment.php" method="post">
       <p><strong>Assignment or Exam would like to give feedback: </strong>
         <select type = "text" name = "Assignment or Exam Title">
         </select></p>
