@@ -11,33 +11,42 @@ on.exit(dbDisconnect(mydb))
 
 S_ID <- 1111111111
 
-sql <- paste0("SELECT Courses FROM Student WHERE Student_ID='",S_ID,"'")
+sql <- sprintf("SELECT Courses FROM Student WHERE Student_ID='%s'", S_ID)
 
 Courses <- fetch(dbSendQuery(mydb,sql),n=-1)
-Course_List <- strsplit(Courses[1,1],"\r\n")
-Course_List <- sub("\r\n"," , ",Courses)
-sql <- paste0("SELECT * FROM Course WHERE Course_ID='IE33200-001'")
-#sql2 <- sprintf("SELECT * FROM Course WHERE Course_ID = 'IE33200-001'")
-sql2 <- sprintf("SELECT * FROM Course WHERE Course_ID = %s", Course_List)
+Course_List <- sub("\r\n","' , '",Courses)
 
-Class_Times <- fetch(dbSendQuery(mydb,sql2),n=-1)
+sql <- sprintf("SELECT * FROM Course WHERE Course_ID IN ('%s')", Course_List)
+
+Class_Times <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 all_cons <- dbListConnections(MySQL())
-for (mydb in all_cons)
+for (mydb in all_cons){
   dbDisconnect(mydb)
+}
+
+SleepHr <- c(0:8)
+IdealWorkHr <- 7
+IdealFreetimeHr <- 40
+IdealStudyHr <- 40
 
 Schedule <- as.data.frame(matrix('Empty', ncol = 110, nrow = 24))
-IdealWorkHr <- 7
-IdealFreetimeHr <- 60
-IdealStudyHr <- 40
-SleepHr <- c(0:8)
+Schedule[SleepHr,] <- 'Sleep'
+for(r in 1:nrow(Class_Times)){
+  for(c in 1:ncol(Schedule)){
+    start_time <-as.numeric(sub(":00:00","",(Class_Times[r,"Course_Start_Time"])))
+    end_time <-as.numeric(sub(":00:00","",(Class_Times[r,"Course_End_Time"])))
+    Schedule[start_time:end_time,] <- sprintf("Attend %s", Class_Times[r,"Course_ID"])
+  }
+}
+
 ActualWorkHr <- 0
 ActualStudyHr <- 0
 ActualFreetimeHr <- 0
 TotalHr <- sum(IdealFreetimeHr,IdealStudyHr,IdealWorkHr)
 
 
-Schedule[SleepHr,] <- 'Sleep'
+
 
 for(c in 1:ncol(Schedule)){
   for(r in 1:nrow(Schedule)){
