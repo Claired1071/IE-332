@@ -8,7 +8,7 @@ $message = "";
 if(count($_POST)>0) {
 	$servername = "mydb.itap.purdue.edu";
 	$username = "g1117490";
-	$password = "$pring21G9!";
+	$password = "$ie332group9!";
 	$dbname = "g1117490";	
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$result = mysqli_query($conn,"SELECT * FROM Advisor WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_password"]."'");
@@ -16,7 +16,7 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Incorrect username or password";
 	} else {
-		header("Location: Student_Main.php");
+		header("Location: Advisor_Main.php");
 		
 		$_SESSION["log"] = 1;
 
