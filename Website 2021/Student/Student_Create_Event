@@ -23,7 +23,7 @@
     <h1> Event Creation</h1> 
 
       <p>Create Event</p>
-      <!-- creating Assignment form-->
+      <!-- creating student event form-->
       <form action = "Student_Create_Event.php" method="post">
       <p><strong>Event Title: </strong> <input type="text" name = "Etitle" placeholder="Enter Event Title" Required></p>
       <p><strong>Event Date: </strong> <input type="date" name = "Edate" placeholder="Enter Event Date" Required></p>
