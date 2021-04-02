@@ -15,7 +15,7 @@ if ($_SESSION["active"] == 0) {
 <!-- importing css from external file-->
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,7 +36,7 @@ if ($_SESSION["active"] == 0) {
 
 <?php
 //pulling student data from the database
-$query = "SELECT * FROM Student WHERE Email = '" .$_SESSION["s_email"]. "'";
+$query = "SELECT * FROM Advisor WHERE Email = '" .$_SESSION["s_email"]. "'";
 $result = mysqli_query($data_base,$query);
 
 if (mysqli_num_rows($result) > 0) {
