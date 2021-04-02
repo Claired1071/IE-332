@@ -1,22 +1,28 @@
-<p>&nbsp;</p>
-<!-- importing css from external file-->
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<header class="h1">
-<div class="left-side"><img class="banner3" style="width: 250px;" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" /><hr class="divider" />
-<div class="page-title">
-<p class="title-main">Advisor Profile</p>
-</div>
-</div>
-<img class="banner1" style="width: 100px;" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" /></header>
-<h1>Advisor Profile Setup</h1>
-<p>Welcome! Please enter all relevant information to create your profile.</p>
-<!-- creating advisor profile form--><form action="welcome.php" method="post">
-<p><strong>Email Address: </strong> <input name="Email" required="" type="email" placeholder="Enter Email Address" /></p>
-<p><strong>Password: </strong> <input name="Password" required="" type="password" placeholder="Enter Password" /></p>
-<p><strong>First Name: </strong> <input name="Fname" required="" type="text" placeholder="Enter First Name" /></p>
-<p><strong>Last Name: </strong> <input name="Lname" required="" type="text" placeholder="Enter Last Name" /></p>
-<p><strong>Phone Number (area code first): </strong> <input name="Phone_Number" required="" type="number" placeholder="1234567890" /></p>
-<p><input class="button1" type="submit" value="Create Account" /></p>
-</form>
+       <!DOCTYPE html>
+<html>
 
+<!-- importing css from external file-->
+
+<head>
+	<title>Student Scheduler</title>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="h1">
+      </div>
+      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
+    </header>
+    <h1>Profile Creation</h1>
+    <p>Hello! Please fill in the information below to make your profile.</p>
+	<!-- creating advisor profile form-->
+	<form action = "Advisor_Create_Profile_Confirmation.php" method="post">
+        <p><strong>Email Address: </strong> <input type = "email" name = "Email" placeholder = "Enter Email Address" Required></p>
+        <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
+        <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
+        <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
+        <p><strong>Major: </strong> <input type="text" name = "Major" placeholder="Enter Major" Required></p>
+        <p><input type="submit" class = "button1" value="Create Profile" /></p>
+	</form>
+</body>
+</html>
