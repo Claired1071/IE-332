@@ -24,7 +24,7 @@
           <a href = "student/student_login.php" target="_self">I am a Student</a>
         </div>
         <div class="button">
-          <a href="instructor/instructor_login.php" target="_self">I am an Instructor</a>
+          <a href="advisor/advisor_login.php" target="_self">I am an Advisor</a>
         </div>
 	<h2><p><a href="group_page.php" class = "button1">IE 332 Group 9 Members</a></p></h2>
   </body>
