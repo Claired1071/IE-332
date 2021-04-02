@@ -5,7 +5,7 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,12 +24,12 @@
 
       <p>Create Event</p>
       <!-- creating Assignment form-->
-      <form action = "Advisor_Create_Assignment.php" method="post">
-      <p><strong>Event Title: </strong> <input type="text" name = "Event Title" placeholder="Enter Assignment Title" Required></p>
-      <p><strong>Event Date: </strong> <input type="date" name = "Event Date" placeholder="Enter Assignment Due Date" Required></p>
-      <p><strong>Event Time: </strong> <input type="time" name = "Event Time" placeholder="Enter Assignment Due Time" Required></p>
+      <form action = "Student_Create_Event.php" method="post">
+      <p><strong>Event Title: </strong> <input type="text" name = "Etitle" placeholder="Enter Event Title" Required></p>
+      <p><strong>Event Date: </strong> <input type="date" name = "Edate" placeholder="Enter Event Date" Required></p>
+      <p><strong>Event Time: </strong> <input type="time" name = "Etime" placeholder="Enter Event Time" Required></p>
         <p><strong>Event Type:</strong>
-        <select type = "text" name = "Event Type">
+        <select type = "text" name = "Etype">
                 <option>Social</option>
                 <option>Work</option>
           <option>Other</option>
