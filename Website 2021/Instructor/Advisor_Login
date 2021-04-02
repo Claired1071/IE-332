@@ -38,8 +38,8 @@
 			    <input class="sign-in" type="submit" value="Sign in">
 			</form>
 			<p> New user? Create an account below!</p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1116905/main/createaccount.php" target="_self" >Create Account</a></p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1116905/main/mainpage.php" target="_self" >Home Page</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/createaccount.php" target="_self" >Create Account</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/mainpage.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
 </html>
