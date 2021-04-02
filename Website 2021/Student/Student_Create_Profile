@@ -5,7 +5,7 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,7 +21,6 @@
         <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
         <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
         <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
-        <p><strong>Phone Number: </strong> <input type = "number" name = "Phone_Number" placeholder = "1234567890" Required></p>
         <p><strong>Major: </strong> <input type="text" name = "Major" placeholder="Enter Major" Required></p>
         <p><strong>GPA: </strong> <input type="text" name = "GPA" placeholder="Enter GPA" Required></p>
         <p><strong>Courses:</strong> <input type="text" name = "Courses" placeholder="Enter Courses" Required></p>
