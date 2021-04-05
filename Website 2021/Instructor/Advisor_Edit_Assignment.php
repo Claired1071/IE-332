@@ -5,7 +5,7 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="image/ico" href="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,18 +25,18 @@
     
     <?php
 //pulling Assignment data from the database
-$query = "SELECT Assignment_Title FROM Assignment WHERE;
+$query = "SELECT Assignment_Name FROM Assignment WHERE;
 $result = mysqli_query($data_base,$query);
 
       <!-- changing assignment form-->
       <form action = "Advisor_Create_Assignment.php" method="post">
       <p><strong>Assignment Would like to change: </strong>
-        <select type = "text" name = "Exam Title">
+        <select type = "text" name = "Assignment_Name">
         </select></p>
-      <p><strong>Assignment Title: </strong> <input type="text" name = "Assignment Title" placeholder="Enter New Assignment Title" Required></p>
-      <p><strong>Assignment Due Date: </strong> <input type="date" name = "Assignment Due Date" placeholder="Enter New Assignment Due Date" Required></p>
-      <p><strong>Assignment Due Time: </strong> <input type="time" name = "Assignment Due Time" placeholder="Enter New Assignment Due Time" Required></p>
-      <p><strong>Estimate Work Hour for the Assignment (hrs): </strong> <input type="text" name = "New Estimate Work Hour for the Assignment (hrs)" placeholder="Enter Estimate Work Hour" Required></p>
+      <p><strong>Assignment Title: </strong> <input type="text" name = "Assignment_Name" placeholder="Enter New Assignment Title" Required></p>
+      <p><strong>Assignment Due Date: </strong> <input type="date" name = "Due_Date" placeholder="Enter New Assignment Due Date" Required></p>
+      <p><strong>Assignment Due Time: </strong> <input type="time" name = "Due_Time" placeholder="Enter New Assignment Due Time" Required></p>
+      <p><strong>Estimate Study Time for the Assignment (hrs): </strong> <input type="text" name = "Suggested_Study_Time" placeholder="Enter Estimate Study Time(Hrs)" Required></p>
       <p><input type="submit" class = "button1" value="Change Assignment" /></p>
 	</form>
 
