@@ -4,7 +4,7 @@ include("new_connection.php");
 
 //user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
-	header("Location:  Advisor_Login.php");
+	header("Location:  advisor_login.php");
 }
 
 ?>
@@ -16,7 +16,7 @@ if ($_SESSION["active"] == 0) {
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="advisor_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
