@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("new_connection.php");
+include("advisor_connect.php");
 
 //user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
@@ -21,14 +21,14 @@ if ($_SESSION["active"] == 0) {
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
+      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
 
 <h1>Edit Profile</h1>
@@ -36,7 +36,7 @@ if ($_SESSION["active"] == 0) {
 
 <?php
 //pulling student data from the database
-$query = "SELECT * FROM Advisor WHERE Email = '" .$_SESSION["s_email"]. "'";
+$query = "SELECT * FROM Advisor WHERE Email = '" .$_SESSION["a_email"]. "'";
 $result = mysqli_query($data_base,$query);
 
 if (mysqli_num_rows($result) > 0) {
@@ -52,7 +52,6 @@ if (mysqli_num_rows($result) > 0) {
 	<p><strong>Password: </strong><input type = "password" name = "Password" value = "<?php echo $row["Password"]; ?>" Required></p>
 	<p><strong>First Name: </strong><input type = "text" name = "Fname" value = "<?php echo $row["Fname"]; ?>" Required></p>
 	<p><strong>Last Name: </strong><input type = "text" name = "Lname" value = "<?php echo $row["Lname"]; ?>" Required></p>
-	<p><strong>Phone Number (area code first): </strong><input type = "number" name = "Pnumber" value = "<?php echo $row["Pnumber"]; ?>" Required></p>
 	<p><input type="submit" class = "button1" value="Update Account" /></p>
 </form>
 
