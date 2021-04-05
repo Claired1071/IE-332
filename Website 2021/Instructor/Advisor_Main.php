@@ -31,11 +31,11 @@ if ($_SESSION["log"] == 0) {
 	<!-- buttons to navigate advisor pages-->
 	<h1>Main Page</h1>
     <div id = "sideR">
-	<p><a href = "Advisor_Profile.php" class = "button1">Profile Page</a></p>
+	<p><a href = "Advisor_Edit_Profile.php" class = "button1">Profile Page</a></p>
 	<p><a href = "Advisor_Create_Exam.php" class = "button1">Create Exam</a></p>
-	<p><a href = "Advisor_Change_Exam.php" class = "button1">Change Exam</a></p>
+	<p><a href = "Advisor_Edit_Exam.php" class = "button1">Change Exam</a></p>
 	<p><a href = "Advisor_Create_Assignment.php" class = "button1">Create Assignment</a></p>
-	<p><a href = "Advisor_Change_Assignment.php" class = "button1">Change Assignment</a></p>
+	<p><a href = "Advisor_Edit_Assignment.php" class = "button1">Change Assignment</a></p>
 	<p><a href = "Advisor_Logout.php" class = "button1">Logout</a></p>
 	<br>
 </body>
