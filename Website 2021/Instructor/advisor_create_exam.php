@@ -11,7 +11,7 @@
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
