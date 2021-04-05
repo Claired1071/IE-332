@@ -61,7 +61,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 mysqli_close($data_base);
 ?>
-<p><a href="Advisor_Main.php" class = "button1">Main Page</a></p>
+<p><a href="advisor_main.php" class = "button1">Main Page</a></p>
 
 </body>
 </html>
