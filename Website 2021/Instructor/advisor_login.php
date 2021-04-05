@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION["active"] == 1) {
-	header("Location: Student_Main.php");
+	header("Location: student_main.php");
 }
 $message = "";
 if(count($_POST)>0) {
@@ -16,7 +16,7 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Incorrect username or password";
 	} else {
-		header("Location: Advisor_Main.php");
+		header("Location: advisor_main.php");
 		
 		$_SESSION["log"] = 1;
 
@@ -66,7 +66,7 @@ if(count($_POST)>0) {
 			</form>
 			<p> New user? Create an account below!</p>
 			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/advisor_create_profile.php" target="_self" >Create Account</a></p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/mainpage.php" target="_self" >Home Page</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/advisor_mainpage.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
 </html>
