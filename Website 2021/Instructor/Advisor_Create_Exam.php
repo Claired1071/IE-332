@@ -24,11 +24,13 @@
     <p>Create Exam</p>
       <!-- creating exam form-->
       <form action = "Advisor_Create_Exam.php" method="post">
-      <p><strong>Exam Title: </strong> <input type="text" name = "Exam Title" placeholder="Enter Exam Title" Required></p>
-      <p><strong>Exam Date: </strong> <input type="date" name = "Exam Date" placeholder="Enter Exam Date" Required></p>
-      <p><strong>Exam Time: </strong> <input type="time" name = "Exam Time" placeholder="Enter Exam Time" Required></p>
-      <p><strong>Exam Duration (mins): </strong> <input type="text" name = "Exam Duration (min)" placeholder="Enter Exam Duration" Required></p>
-      <p><strong>Suggested Study Hour for the Exam (hrs): </strong> <input type="text" name = "Suggested Study Hour for the Exam (hrs)" placeholder="Enter Suggested Study Hour" Required></p>
+      <p><strong>Course ID: </strong> <input type="text" name = "Course_ID" placeholder="Enter Course ID" Required></p>     
+      <p><strong>Exam Title: </strong> <input type="text" name = "Exam_Name" placeholder="Enter Exam Title" Required></p>
+      <p><strong>Exam ID: </strong> <input type="text" name = "Exam_ID" placeholder="Enter ID Required></p>
+      <p><strong>Exam Date: </strong> <input type="date" name = "Exam_Date" placeholder="Enter Exam Date" Required></p>
+      <p><strong>Exam Start Time: </strong> <input type="time" name = "Exam_Start_Time" placeholder="Enter Exam Start Time" Required></p>
+      <p><strong>Exam End Time: </strong> <input type="time" name = "Exam_End_Time" placeholder="Enter Exam End Time" Required></p>
+      <p><strong>Suggested Study Time for the Exam (hrs): </strong> <input type="text" name = "Suggested_Study_Time" placeholder="Enter Suggested Study Time (hrs)" Required></p>
       <p><input type="submit" class = "button1" value="Create Exam" /></p>
 	</form>
 
