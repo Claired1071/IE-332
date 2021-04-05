@@ -1,14 +1,14 @@
 <?php
 session_start();
-include("Advisor_Connect.php");
+include("advisor_connect.php");
 
 //user cannot go back after logging out
 if ($_SESSION["active"] == 0) {
-	header("Location:  Advisor_Login.php");
+	header("Location:  advisor_login.php");
 }
 //no pre-existing email redirects user to main page
 if ($_POST["Email"] == "") {
-	header("Location:  Advisor_Main.php");
+	header("Location:  advisor_main.php");
 }
 
 ?>
@@ -18,7 +18,7 @@ if ($_POST["Email"] == "") {
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -49,7 +49,7 @@ $sql = "UPDATE Student SET Email = '" .$a_email. "', Password = '" .$a_password.
 if (mysqli_query($data_base,$sql)) {
     echo "<p>Profile updated</p>";
     shell_exec("Rscript /home/campus/g1117490/www/main/Project_R/matchingInputs.R");
-    header("Location: Advisor_main.php");
+    header("Location: advisor_main.php");
     
     $_SESSION["a_email"] = $_POST["Email"];
 } else {
@@ -59,7 +59,7 @@ if (mysqli_query($data_base,$sql)) {
 mysqli_close($data_base);
 ?>
 
-<p><a href = "Advisor_Main.php" class = "button1" >Main Page</a></p>
+<p><a href = "advisor_main.php" class = "button1" >Main Page</a></p>
 
 </body>
 </html>
