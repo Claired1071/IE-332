@@ -51,7 +51,7 @@ mysqli_close($data_base);
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="studentForm.css" rel="stylesheet" type="text/css" />
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <header class="h1">
