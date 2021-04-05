@@ -18,7 +18,7 @@
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
+      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
     <h1> Exam Creation</h1>
     <p>Create Exam</p>
