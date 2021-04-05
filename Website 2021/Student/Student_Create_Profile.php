@@ -23,7 +23,7 @@
         <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
         <p><strong>Major: </strong> <input type="text" name = "Major" placeholder="Enter Major" Required></p>
         <p><strong>GPA: </strong> <input type="text" name = "GPA" placeholder="Enter GPA" Required></p>
-        <p><strong>Courses:</strong> <input type="text" name = "Courses" placeholder="Enter Courses" Required></p>
+        <p><strong>Courses:</strong> <input type="text" name = "Courses" placeholder="Ex. IE33200-001, IE33600-002" Required></p>
         <p><strong>Year:</strong>
         <select type = "text" name = "Year">
                 <option>Freshman</option>
