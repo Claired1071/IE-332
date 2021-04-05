@@ -2,10 +2,10 @@
 /* CSS DOCUMENT */
 body {
 	height: 100vh;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Times New Roman, Helvetica, sans-serif;
 	line-height: 1;
 	color: #FFFFFF;
-	background-image: linear-gradient(to bottom, #BDAF94, #60553F);
+	background-image: linear-gradient(to bottom, #7B68EE, #7B68EE);
 	text-align: center;
 	font: .75em LucidaGrande, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Arial, Helvetica, Tahoma, sans-serif;
 }
@@ -40,7 +40,7 @@ label {
 .input {
 	width: 85%;
     height: 3vh;
-    background: #D5DBE5;
+    background: #7B68EE;
     font-weight: 600;
 }
 .input:focus {
