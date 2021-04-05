@@ -6,19 +6,19 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.cco.purdue.edu/Content/Layout/logo.svg" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://cdn.shopify.com/s/files/1/0241/9737/products/1008-PUR-Tank-black_2_1800x.jpg?v=1571442802" style= "width:100px">
+      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
 
 	<h1>Hello! <?php echo $_POST["Fname"]; ?></h1>
@@ -27,7 +27,7 @@
 	<?php
 
 	if ($_POST["Email"] == "") {
-		header("Location:  Student_Login.php");
+		header("Location:  student_login.php");
 	}
 
 	//Connecting to database
@@ -43,26 +43,25 @@
 	    exit();
 	}
 	
-	//pulling variable values from student form
+	//getting variable values from student create profile page
 
 	$s_email = $_POST['Email'];
 	$s_password = $_POST['Password'];
 	$s_fname = $_POST['Fname'];
 	$s_lname = $_POST['Lname'];
-	$s_number = $_POST['Pnumber'];
 	$s_major = $_POST['Major'];
 	$s_GPA = $_POST['GPA'];
 	$s_courses = $_POST['Courses'];
 	$s_year = $_POST['Year'];
 		
 	//checking the database to see if an email address already exists
-	$check = mysqli_query($data_base, "SELECT * FROM Student WHERE Email = '$stud_email'");
+	$check = mysqli_query($data_base, "SELECT * FROM Student WHERE Email = '$s_email'");
 	if(mysqli_num_rows($check) > 0){
 		echo "An account already exists with this email" . "<br>" . "<br>";
 	}else{
 		//Student information stored within database
-		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Pnumber, Major, GPA, Courses, Year)
-		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_number . "', '" . $s_major . "', '" . $stud_GPA . "', '" . $stud_courses . "', '" . $stud_year . "')";
+		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Major, GPA, Courses, Year)
+		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
 	
 		//Redirecting to Login page
 		if (mysqli_query($data_base, $sql)) {
