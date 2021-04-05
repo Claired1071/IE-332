@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION["active"] == 1) {
-	header("Location: Student_Main.php");
+	header("Location: student_main.php");
 }
 $message = "";
 if(count($_POST)>0) {
@@ -16,7 +16,7 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Incorrect username or password";
 	} else {
-		header("Location: Student_Main.php");
+		header("Location: student_main.php");
 		
 		$_SESSION["log"] = 1;
 
