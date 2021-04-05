@@ -21,6 +21,7 @@
         <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
         <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
         <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
+	<p><strong>Phone Number: </strong> <input type="text" name = "Pnumber" placeholder="Enter Phone Number" Required></p>
         <p><input type="submit" class = "button1" value="Create Profile" /></p>
 	</form>
 </body>
