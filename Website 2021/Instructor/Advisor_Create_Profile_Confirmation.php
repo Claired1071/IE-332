@@ -62,7 +62,7 @@
 	}else{
 		//Advisor information stored within database
 		$sql = "INSERT INTO Advisor (Email, Password, Fname, Lname, Pnumber)
-		VALUES('" . $a_email . "', '" . $a_password . "', '" . $a_fname . "', '" . $a_lname . "', '" . $a_number . "')";
+		VALUES('" . $a_email . "', '" . $a_password . "', '" . $a_fname . "', '" . $a_lname . "', '" . $a_number . "'WHERE Email = '" . $_SESSION["a_email"] . "'";
 		//Redirecting to Login page
 		if (mysqli_query($data_base, $sql)) {
 			echo "<p>Please login to access your account</p>";
