@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="image/ico" href="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -29,7 +29,7 @@ $query = "SELECT Event_Title FROM Event WHERE;
 $result = mysqli_query($data_base,$query);
 
       <!-- changing event-->
-      <form action = "Student_Create_Event.php" method="post">
+      <form action = "student_create_event.php" method="post">
       <p><strong>Event you would like to change: </strong>
         <select type = "text" name = "Event Title">
         </select></p>
