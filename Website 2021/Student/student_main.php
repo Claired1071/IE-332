@@ -20,10 +20,10 @@ if ($_SESSION["active"] == 0) {
 <img class="banner1" style="width: 100px;" src="https://image.flaticon.com/icons/png/512/60/60785.png" /></header><!-- buttons to go to other pages-->
 <h1>Main</h1>
 <div id="sideR">
-<p><a class="button1" href="Student_Profile.php">Profile</a></p>
-  <p><a class="button1" href="Student_Events.php">Events</a></p>
-  <p><a class="button1" href="Student_Feedback.php">Feedback</a></p>
-<p><a class="button1" href="Student_Logout.php">Logout</a></p>
+<p><a class="button1" href="student_profile.php">Profile</a></p>
+  <p><a class="button1" href="student_events.php">Events</a></p>
+  <p><a class="button1" href="student_feedback.php">Feedback</a></p>
+<p><a class="button1" href="student_logout.php">Logout</a></p>
 <br />
 <p><em>Thank you for using Student Scheduler!</em></p>
 </div>
