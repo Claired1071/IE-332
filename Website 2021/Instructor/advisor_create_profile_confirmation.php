@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="advisor_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -27,7 +27,7 @@
 	<?php
 
 	if ($_POST["Email"] == "") {
-		header("Location:  Advisor_Login.php");
+		header("Location:  advisor_login.php");
 	}
 
 	//Connecting to database
@@ -74,6 +74,6 @@
 	mysqli_close($data_base);
 
 	?>
-<p><a href = "Advisor_login.php" class = "button1">Login Page</a></p>
+<p><a href = "advisor_login.php" class = "button1">Login Page</a></p>
 </body>
 </html>
