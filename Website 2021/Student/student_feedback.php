@@ -5,8 +5,8 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-    <link href="Student_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -23,7 +23,7 @@
     <h1> Feedback </h1>
     <p> Feedback </p>
       <!-- feedback form-->
-      <form action = "Advisor_Create_Assignment.php" method="post">
+      <form action = "advisor_create_assignment.php" method="post">
       <p><strong>Assignment or Exam would like to give feedback: </strong>
         <select type = "text" name = "Assignment or Exam Title">
         </select></p>
