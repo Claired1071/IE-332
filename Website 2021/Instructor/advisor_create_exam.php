@@ -6,7 +6,7 @@
 <head>
 	<title>Student Scheduler</title>
     <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
-    <link href="Advisor_Create_Profile_css.css" rel="stylesheet" type="text/css" />
+    <link href="advisor_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
@@ -23,7 +23,7 @@
     <h1> Exam Creation</h1>
     <p>Create Exam</p>
       <!-- creating exam form-->
-      <form action = "Advisor_Create_Exam.php" method="post">
+      <form action = "advisor_create_exam.php" method="post">
       <p><strong>Course ID: </strong> <input type="text" name = "Course_ID" placeholder="Enter Course ID" Required></p>     
       <p><strong>Exam Title: </strong> <input type="text" name = "Exam_Name" placeholder="Enter Exam Title" Required></p>
       <p><strong>Exam ID: </strong> <input type="text" name = "Exam_ID" placeholder="Enter ID Required></p>
