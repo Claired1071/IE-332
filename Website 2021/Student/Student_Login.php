@@ -34,7 +34,7 @@ if(count($_POST)>0) {
 		<link href="login.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<img class="logo" src="https://wl.mypurdue.purdue.edu/static_resources/portal/images/logo.png">
+		<img class="logo" src="https://image.flaticon.com/icons/png/512/123/123392.png">
 		<div class="login-container">
 			<h2 class="title">Hello!</h2>
 			<form action="" method = "post">
@@ -50,7 +50,7 @@ if(count($_POST)>0) {
 					<script>
 					<!--When box checked password is shown-->
 					function myFunction() {
-						var x = document.getElementById("stud_password");
+						var x = document.getElementById("s_password");
 						if (x.type === "password") {
 							x.type = "text";
 						} else {
