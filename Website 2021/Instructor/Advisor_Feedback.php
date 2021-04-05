@@ -25,13 +25,13 @@
     
     <?php
 //pulling assignment data from the database
-$query = "SELECT Assignment_Title FROM Assignment;
+$query = "SELECT Assignment_Name FROM Assignment;
 $result = mysqli_query($data_base,$query);
 
       <!-- feedback form-->
       <form action = "Advisor_Create_Assignment.php" method="post">
-      <p><strong>Assignment or Exam Would like to give feedback: </strong>
-        <select type = "text" name = "Assignment or Exam Title">
+      <p><strong>Please Select An Assignment To Give Feedback: </strong>
+        <select type = "text" name = "Assignment_Name">
         </select></p>
 	<p><strong>Please Provide Feedback:</strong> <input type="text" name = "Feedback" placeholder="Enter Feedback" Required></p>
 	<p><input type="submit" class = "button1" value="Submit Feedback" /></p>
