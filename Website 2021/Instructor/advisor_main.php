@@ -2,7 +2,7 @@
 session_start();
 //does not allow advisor to use back arrow after logging out
 if ($_SESSION["log"] == 0) {
-	header("Location: Advisor_Login.php");
+	header("Location: advisor_login.php");
 }
 
 ?>
