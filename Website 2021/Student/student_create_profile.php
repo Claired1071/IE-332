@@ -16,7 +16,7 @@
     <h1>Profile Creation</h1>
     <p>Hello! Please fill in the information below to make your profile.</p>
 	<!-- creating student profile form-->
-	<form action = "Student_Create_Profile_Confirmation.php" method="post">
+	<form action = "student_create_profile_confirmation.php" method="post">
         <p><strong>Email Address: </strong> <input type = "email" name = "Email" placeholder = "Enter Email Address" Required></p>
         <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
         <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
