@@ -31,7 +31,7 @@ if(count($_POST)>0) {
 	<head>
 		<title>Student Scheduler</title>
 		<link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
-		<link href="login.css" rel="stylesheet" type="text/css">
+		<link href="student_login_css.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<img class="logo" src="https://image.flaticon.com/icons/png/512/123/123392.png">
@@ -65,7 +65,7 @@ if(count($_POST)>0) {
 			    <input class="sign-in" type="submit" value="Sign in">
 			</form>
 			<p> New user? Create an account below!</p>
-			<p><a class="new-account" href="s_create.php" target="_self" >Create Account</a></p>
+			<p><a class="new-account" href="student_create_profile.php" target="_self" >Create Account</a></p>
 			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/mainpage.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
