@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="test21.css" width = "100%" rel="stylesheet" type="text/css" />
   </head>
   <body>
