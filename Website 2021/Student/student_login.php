@@ -66,7 +66,7 @@ if(count($_POST)>0) {
 			</form>
 			<p> New user? Create an account below!</p>
 			<p><a class="new-account" href="student_create_profile.php" target="_self" >Create Account</a></p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/Main_Page.php" target="_self" >Home Page</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/Main/Main_Page.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
 </html>
