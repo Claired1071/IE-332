@@ -11,7 +11,7 @@ if(count($_POST)>0) {
 	$password = "iegroup9";
 	$dbname = "g1117490";	
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	$result = mysqli_query($conn,"SELECT * FROM Student WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_password"]."'");
+	$result = mysqli_query($conn,"SELECT * FROM Student WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_pass"]."'");
 	$count  = mysqli_num_rows($result);
 	if($count==0) {
 		$message = "Incorrect username or password";
@@ -30,7 +30,7 @@ if(count($_POST)>0) {
 <!-- importing css from external file-->
 	<head>
 		<title>Student Scheduler</title>
-		<link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+		<link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
 		<link href="student_login_css.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
