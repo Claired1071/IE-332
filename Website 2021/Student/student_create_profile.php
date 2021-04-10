@@ -9,10 +9,14 @@
     <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header class="h1">
-      </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
-    </header>
+   <header class="h1">
+<div class="left-side"><img class="banner3" style="width: 250px;" src="https://image.flaticon.com/icons/png/512/123/123392.png" /><hr class="divider" />
+<div class="page-title">
+<p class="title-main">Student Scheduler</p>
+<p class="title">Redefining student scheduling</p>
+</div>
+</div>
+<img class="banner1" style="width: 100px;" src="https://image.flaticon.com/icons/png/512/60/60785.png" /></header>
     <h1>Profile Creation</h1>
     <p>Hello! Please fill in the information below to make your profile.</p>
 	<!-- creating student profile form-->
@@ -21,6 +25,7 @@
         <p><strong>Password: </strong> <input type = "password" name = "Password" placeholder = "Enter Password" Required></p>
         <p><strong>First Name: </strong> <input type = "text" name = "Fname" placeholder = "Enter First Name" Required></p>
         <p><strong>Last Name: </strong> <input type = "text" name = "Lname" placeholder = "Enter Last Name" Required></p>
+        <p><strong>Student ID: </strong> <input type = "text" name = "Student_ID" placeholder = "11111111111" Required></p>
         <p><strong>Major: </strong> <input type="text" name = "Major" placeholder="Enter Major" Required></p>
         <p><strong>GPA: </strong> <input type="text" name = "GPA" placeholder="Enter GPA" Required></p>
         <p><strong>Courses:</strong> <input type="text" name = "Courses" placeholder="Ex. IE33200-001, IE33600-002" Required></p>
