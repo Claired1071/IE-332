@@ -18,7 +18,7 @@
       <img class="banner1" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" style= "width:100px">
     </header>
     <div class="page">
-      <img class="hand" src="https://image.freepik.com/free-vector/time-management-concept-talk-chart_23-2148831728.jpg">
+      <img class="hand" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185301.svg?token=exp=1618093386~hmac=a726bca543c696bb3e2496c2427e926d">
       <div class="person-options">
         <div class="button">
           <a href = "student/student_login.php" target="_self">I am a Student</a>
