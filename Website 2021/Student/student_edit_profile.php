@@ -15,20 +15,20 @@ if ($_SESSION["active"] == 0) {
 <!-- importing css from external file-->
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1116905/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
     <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
+        <img class="banner3" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618089495~hmac=84e1937dad55bad2ee74e52fe392a686" style= "width:250px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
+      <img class="banner1" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" style= "width:100px">
     </header>
 
 <h1>Edit Profile</h1>
@@ -52,6 +52,7 @@ if (mysqli_num_rows($result) > 0) {
 	<p><strong>Password: </strong><input type = "password" name = "Password" value = "<?php echo $row["Password"]; ?>" Required></p>
 	<p><strong>First Name: </strong><input type = "text" name = "Fname" value = "<?php echo $row["Fname"]; ?>" Required></p>
 	<p><strong>Last Name: </strong><input type = "text" name = "Lname" value = "<?php echo $row["Lname"]; ?>" Required></p>
+	 <p><strong>Student ID: </strong><input type="text" name = "Student_ID" placeholder="Ex. 11111111111" value = "<?php echo $row["Student_ID"]; ?>" Required></p>
         <p><strong>Major: </strong><input type="text" name = "Major" placeholder="Enter Major" value = "<?php echo $row["Major"]; ?>" Required></p>
 	<p><strong>GPA: </strong><input type="text" name = "GPA" placeholder="Enter GPA" value = "<?php echo $row["GPA"]; ?>" Required></p>
 	<p><strong>Courses: </strong><input type="text" name = "Courses" value = "<?php echo $row["Courses"]; ?>" Required></p>
