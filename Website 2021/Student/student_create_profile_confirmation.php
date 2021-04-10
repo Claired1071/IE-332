@@ -18,7 +18,7 @@
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
+      <img class="banner1" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" style= "width:100px">
     </header>
 
 	<h1>Hello! <?php echo $_POST["Fname"]; ?></h1>
@@ -49,6 +49,7 @@
 	$s_password = $_POST['Password'];
 	$s_fname = $_POST['Fname'];
 	$s_lname = $_POST['Lname'];
+	$s_ID = $_POST['Student_ID'];
 	$s_major = $_POST['Major'];
 	$s_GPA = $_POST['GPA'];
 	$s_courses = $_POST['Courses'];
@@ -60,8 +61,8 @@
 		echo "An account already exists with this email" . "<br>" . "<br>";
 	}else{
 		//Student information stored within database
-		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Major, GPA, Courses, Year)
-		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
+		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Student_ID, Major, GPA, Courses, Year)
+		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_ID . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
 	
 		//Redirecting to Login page
 		if (mysqli_query($data_base, $sql)) {
