@@ -8,7 +8,7 @@ $message = "";
 if(count($_POST)>0) {
 	$servername = "mydb.itap.purdue.edu";
 	$username = "g1117490";
-	$password = "$pring21G9!";
+	$password = "iegroup9";
 	$dbname = "g1117490";	
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$result = mysqli_query($conn,"SELECT * FROM Student WHERE Email='" . $_POST["s_email"] . "' AND Password = '". $_POST["s_password"]."'");
@@ -66,7 +66,7 @@ if(count($_POST)>0) {
 			</form>
 			<p> New user? Create an account below!</p>
 			<p><a class="new-account" href="student_create_profile.php" target="_self" >Create Account</a></p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/mainpage.php" target="_self" >Home Page</a></p>
+			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/Main_Page.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
 </html>
