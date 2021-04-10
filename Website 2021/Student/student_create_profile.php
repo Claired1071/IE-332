@@ -16,7 +16,8 @@
 <p class="title">Redefining student scheduling</p>
 </div>
 </div>
-<img class="banner1" style="width: 100px;" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" /></header>
+<img class="banner1" style="width: 100px;" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" />
+    </header>
     <h1>Profile Creation</h1>
     <p>Hello! Please fill in the information below to make your profile.</p>
 	<!-- creating student profile form-->
