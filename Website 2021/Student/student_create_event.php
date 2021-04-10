@@ -1,8 +1,14 @@
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+       <!DOCTYPE html>
+<html>
+
 <!-- importing css from external file-->
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
+<head>
+	<title>Student Scheduler</title>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
 <header class="h1">
 <div class="left-side"><img class="banner3" style="width: 250px;" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618089495~hmac=84e1937dad55bad2ee74e52fe392a686" /><hr class="divider" />
 <div class="page-title">
@@ -25,3 +31,5 @@
 </select></p>
 <p><input class="button1" type="submit" value="Create Event" /></p>
 </form>
+</body>
+</html>
