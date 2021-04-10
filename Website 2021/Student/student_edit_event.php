@@ -24,8 +24,8 @@
     <p> Change Event </p>
     
     <?php
-//pulling Assignment data from the database
-$query = "SELECT Event_Title FROM Event WHERE;
+//pulling event data from the database
+$query = "SELECT Event_Name FROM Event WHERE;
 $result = mysqli_query($data_base,$query);
 
       <!-- changing event-->
