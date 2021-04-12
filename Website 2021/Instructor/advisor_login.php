@@ -8,7 +8,7 @@ $message = "";
 if(count($_POST)>0) {
 	$servername = "mydb.itap.purdue.edu";
 	$username = "g1117490";
-	$password = "$ie332group9!";
+	$password = "$iegroup9";
 	$dbname = "g1117490";	
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$result = mysqli_query($conn,"SELECT * FROM Advisor WHERE Email='" . $_POST["a_email"] . "' AND Password = '". $_POST["a_password"]."'");
@@ -34,7 +34,7 @@ if(count($_POST)>0) {
 		<link href="login.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<img class="logo" src="https://image.flaticon.com/icons/png/512/123/123392.png">
+		<img class="logo" src="https://image.flaticon.com/icons/png/512/123/123392.png">v
 		<div class="login-container">
 			<h2 class="title">Hello!</h2>
 			<form action="" method = "post">
@@ -65,7 +65,7 @@ if(count($_POST)>0) {
 			    <input class="sign-in" type="submit" value="Sign in">
 			</form>
 			<p> New user? Create an account below!</p>
-			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/advisor_create_profile.php" target="_self" >Create Account</a></p>
+			<p><a class="new-account" href="advisor_create_profile.php" target="_self" >Create Account</a></p>
 			<p><a class="new-account" href="https://web.ics.purdue.edu/~g1117490/main/advisor_main.php" target="_self" >Home Page</a></p>
 		</div>
 	</body>
