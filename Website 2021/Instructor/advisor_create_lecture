@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<!-- importing css from external file-->
+
+<head>
+	<title>Student Scheduler</title>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link href="advisor_create_profile_css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="h1">
+      <div class="left-side">
+        <div class="left-side"><img class="banner3" style="width: 250px;" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618089495~hmac=84e1937dad55bad2ee74e52fe392a686" /><hr class="divider" />
+        <hr class="divider">
+        <div class="page-title">
+          <p class="title-main">Student Scheduler</p>
+          <p class="title">Redefining student scheduling</p>
+        </div>
+      </div>
+      <img class="banner1" style="width: 100px;" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" /></header>
+    </header>
+    <h1> Lecture Creation</h1>
+    <p>Create Lecture</p>
+      <!-- creating lecture form-->
+      <form action = "advisor_create_exam.php" method="post">
+      <p><strong>Course ID: </strong> <input type="text" name = "Course_ID" placeholder="Enter Course ID" Required></p>     
+      <p><strong>Lecture Title: </strong> <input type="text" name = "Lecture_Name" placeholder="Enter Lecture Title" Required></p>
+      <p><strong>Lecture ID: </strong> <input type="text" name = "Lecture_ID" placeholder="Enter ID Required></p>
+      <p><strong>Lecture Date(s): </strong> <input type="date" name = "Lecture_Date" placeholder="Enter Lecture Date" Required></p>
+      <p><strong>Lecture Start Time(s): </strong> <input type="time" name = "Lecture_Start_Time" placeholder="Enter Lecture Start Time" Required></p>
+      <p><strong>Lecture End Time(s): </strong> <input type="time" name = "Lecture_End_Time" placeholder="Enter Lecture End Time" Required></p>
+      <p><input type="submit" class = "button1" value="Create Exam" /></p>
+	</form>
+</body>
+</html>
