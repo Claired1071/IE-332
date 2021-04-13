@@ -38,21 +38,11 @@
         
         
         <form action="" method="post">
-
-
-<p><strong>Did you find yourself having to put in more hours than was suggested? </strong><select name="feedback_more">
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-</select></p>
           
-<p><strong>If so, how many more hours did you have to study/work on the assignment for?</strong> <input type="text" name = "feedback_morehours" placeholder="Enter number of hours" Required></p>
+<p><strong>If you found yourself putting in more hours than suggested, please list the additional amount of hours with a (+) in front:</strong> <input type="text" name = "feedback_morehours" placeholder="Ex. +1" Required></p>
 
-<p><strong>Did you find yourself not needing to put in as many hours as was suggested? </strong><select name="feedback_less">
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-</select></p>
+<p><strong>If you found yourself putting in less hours than suggested, please list the additional amount of hours that you did not need with a (-) in front:</strong> <input type="text" name = "feedback_lesshours" placeholder="Ex. -1" Required></p>
 
-<p><strong>If so, how many less hours did you not have to study/work on the assignment for?</strong> <input type="text" name = "feedback_lesshours" placeholder="Enter number of hours" Required></p>
 <p><input type="submit" class = "button1" value = "Submit rating"></p>
 </form>
 <!--message for submission-->
