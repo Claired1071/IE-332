@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS DOCUMENT */
 body {
-  font-family: Times New Roman, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
  
 a {
@@ -18,7 +18,7 @@ a {
   font-size: 35px;
   color: white;
   background: black;
-  font-style: bold;
+  font-style: italic;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,17 +39,17 @@ a {
 }
 
 .title {
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
+  font-family: acumin-pro-semi-condensed, "Franklin Gothic", sans-serif;
   font-size: 24px
 }
 .title-main {
   font-weight: 600;
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
+  font-family: acumin-pro-semi-condensed, "Franklin Gothic", sans-serif;
   font-size: 24px
 }
 
 body {
-  background: #87CEEB;
+  background: #9b8249;
 }
 
 .page {
@@ -75,8 +75,8 @@ body {
   justify-content:center;
   align-items: center;
   text-decoration: none;
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
-  background-image: none;
+  font-family: acumin-pro-semi-condensed, "Franklin Gothic", sans-serif;
+  background-image: url(https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png);
 }
 
 .button {
@@ -92,7 +92,7 @@ body {
 	font-size: 24px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-image: none;
+	background-image: url(https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png);
 }
  
 .banner1 {
@@ -128,7 +128,7 @@ p {
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-image: none;
+	background-image: url(https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png);
 }
 
 .footer {
@@ -140,5 +140,5 @@ p {
   padding: 7px;
   text-align: center;
   font-size: 12px;
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
+  font-family: acumin-pro-semi-condensed, "Franklin Gothic", sans-serif;
 }
