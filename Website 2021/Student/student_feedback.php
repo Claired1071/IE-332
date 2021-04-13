@@ -11,24 +11,49 @@
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
+        <img class="banner3" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618277116~hmac=cbc9ee8049bc4abca2b26f462e4ad900">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
     <h1> Feedback </h1>
     <p> Feedback </p>
       <!-- feedback form-->
       <form action = "advisor_create_assignment.php" method="post">
-      <p><strong>Assignment or Exam would like to give feedback: </strong>
+      <p><strong>Assignment or Exam for Feedback: </strong>
         <select type = "text" name = "Assignment or Exam Title">
         </select></p>
-	<p><strong>Please Provide Feedback:</strong> <input type="text" name = "Feedback" placeholder="Enter Feedback" Required></p>
-	<p><input type="submit" class = "button1" value="Submit Feedback" /></p>
-	</form>
+        
+        
+        <form action="" method="post">
+
+
+<p><strong>Did you find yourself having to put in more hours than was suggested? </strong><select name="feedback_morehours">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></p>
+          
+<p><strong>If so, how many more hours did you have to study/work on the assignment for?</strong> <input type="text" name = "feedback_lesshours" placeholder="Enter number of hours" Required></p>
+
+<p><strong>Did you find yourself not needing to put in as many hours as was suggested? </strong><select name="feedback_lesshours">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></p>
+
+<p><strong>If so, how many less hours did you not have to study/work on the assignment for?</strong> <input type="text" name = "Feedback" placeholder="Enter number of hours" Required></p>
+<p><input type="submit" class = "button1" value = "Submit rating"></p>
+</form>
+<!--message for submission-->
+<div class="message"><?php if($message!="") { echo $message; } ?></div>
+
+<?php
+mysqli_close($data_base);
+?>
+
+<p><a href="student_main.php" class = "button1">Back to Main</a></p>
+
 </body>
 </html>
