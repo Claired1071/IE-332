@@ -77,4 +77,4 @@
 	?>
 <p><a href = "student_login.php" class = "button1">Login Page</a></p>
 </body>
-</html>
+</html> 
