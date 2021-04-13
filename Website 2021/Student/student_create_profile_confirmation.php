@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<!-- importing external css file-->
+<!-- retrieving external css file-->
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/Main/ie.ico"/>
     <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618089495~hmac=84e1937dad55bad2ee74e52fe392a686" style= "width:250px">
+        <img class="banner3" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618277116~hmac=cbc9ee8049bc4abca2b26f462e4ad900" style= "width:100px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
-      </div>
-      <img class="banner1" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185823.svg?token=exp=1618088399~hmac=85714128e97e4f96030e0e83ec09bc99" style= "width:100px">
+	    </div>
     </header>
 
 	<h1>Hello! <?php echo $_POST["Fname"]; ?></h1>
-	<p>Confirming email address provided: <?php echo $_POST["Email"]; ?></p>
+	<p>Confirming email address: <?php echo $_POST["Email"]; ?></p>
 	
 	<?php
 
@@ -43,7 +42,7 @@
 	    exit();
 	}
 	
-	//getting variable values from student create profile page
+	//retrieving variable values from student create profile 
 
 	$s_email = $_POST['Email'];
 	$s_password = $_POST['Password'];
@@ -55,19 +54,19 @@
 	$s_courses = $_POST['Courses'];
 	$s_year = $_POST['Year'];
 		
-	//checking the database to see if an email address already exists
+	//checking database if email address is already existent
 	$check = mysqli_query($data_base, "SELECT * FROM Student WHERE Email = '$s_email'");
 	if(mysqli_num_rows($check) > 0){
-		echo "An account already exists with this email" . "<br>" . "<br>";
+		echo "Account already exists with this email" . "<br>" . "<br>";
 	}else{
-		//Student information stored within database
-		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Student_ID, Major, GPA, Courses, Year)
-		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_ID . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
+		//Student information stored in database
+		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Major, GPA, Courses, Year)
+		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
 	
-		//Redirecting to Login page
+		//directing to Login page
 		if (mysqli_query($data_base, $sql)) {
 			echo "<p>Please login to access your account</p>";
-			shell_exec("Rscript /home/campus/g1117490/www/main/Project_R/matchingInputs.R");
+			shell_exec("Rscript /home/campus/g1117490/www/Main/r/Scheduling_Algorithm.R");
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($data_base);
 		}
@@ -75,6 +74,6 @@
 	mysqli_close($data_base);
 
 	?>
-<p><a href = "student_login.php" class = "button1">Login Page</a></p>
+<p><a href = "student_login.php" class = "button1">Login</a></p>
 </body>
 </html> 
