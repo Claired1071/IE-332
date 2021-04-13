@@ -23,8 +23,17 @@
     <p> Feedback </p>
       <!-- feedback form-->
       <form action = "advisor_create_assignment.php" method="post">
-      <p><strong>Assignment or Exam for Feedback: </strong>
+        
+        <p><strong>Course: </strong>
         <select type = "text" name = "Assignment or Exam Title">
+        </select></p>
+        
+      <p><strong>Assignment for Feedback: </strong>
+        <select type = "text" name = "Assignment Title">
+        </select></p>
+        
+              <p><strong>Exam for Feedback: </strong>
+        <select type = "text" name = "Exam Title">
         </select></p>
         
         
