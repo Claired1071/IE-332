@@ -39,11 +39,16 @@
         
         <form action="" method="post">
           
-<p><strong>If you found yourself putting in more hours than suggested, please list the additional amount of hours with a (+) in front:</strong> <input type="text" name = "feedback_morehours" placeholder="Ex. +1" Required></p>
+<p><strong>If you found yourself putting in more hours than suggested, please list the additional amount of hours:</strong> <input type="text" name = "feedback_morehours" placeholder="Ex. 1" Required></p>
 
-<p><strong>If you found yourself putting in less hours than suggested, please list the additional amount of hours that you did not need with a (-) in front:</strong> <input type="text" name = "feedback_lesshours" placeholder="Ex. -1" Required></p>
+<p><strong>If you found yourself putting in less hours than suggested, please list the additional amount of hours that you did not need:</strong> <input type="text" name = "feedback_lesshours" placeholder="Ex. 1" Required></p>
+          
+<p><strong>Did you find the suggested number of hours sufficient? </strong><select name="feedback_hours">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></p>
 
-<p><input type="submit" class = "button1" value = "Submit rating"></p>
+<p><input type="submit" class = "button1" value = "Submit Feedback"></p>
 </form>
 <!--message for submission-->
 <div class="message"><?php if($message!="") { echo $message; } ?></div>
