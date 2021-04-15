@@ -23,14 +23,13 @@ if ($_POST["Email"] == "") {
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:100px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining student scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
     </header>
 	<h1>Hello <?php echo $_POST["Fname"]; ?></h1>
 	<p>Email address: <?php echo $_POST["Email"]; ?></p>
