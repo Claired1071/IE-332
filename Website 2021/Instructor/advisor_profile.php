@@ -52,14 +52,13 @@ mysqli_close($data_base);
 <body>
 <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:250px">
+        <img class="banner3" src="https://image.flaticon.com/icons/png/512/123/123392.png" style= "width:100px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
           <p class="title">Redefining Student Scheduling</p>
         </div>
       </div>
-      <img class="banner1" src="https://image.flaticon.com/icons/png/512/60/60785.png" style= "width:100px">
 </header>
 <h1>Advisor Profile</h1>
 	
