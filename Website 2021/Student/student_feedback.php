@@ -13,6 +13,11 @@
 <h1>Feedback</h1>
 <p>Feedback</p>
 
+	<?php
+//pulling students event data from the database
+$query = "SELECT course_ID FROM courses WHERE;
+$result = mysqli_query($data_base,$query);
+
 <!-- feedback form-->
 <form action="advisor_create_assignment.php" method="post">
 <p><strong>Course: </strong><select name="Assignment or Exam Title"></select></p>
