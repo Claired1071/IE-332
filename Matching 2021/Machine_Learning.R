@@ -13,8 +13,8 @@ Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
 Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT GPA, Year, Major FROM Feedback INNER JOIN Students ON Email_ID = Email ", Email_ID)
-GPA <- fetch(dbSendQuery(mydb,sql),n=-1) 
+sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Email IN (SELECT Email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name))
+Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
 #sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
 #Year <- fetch(dbSendQuery(mydb,sql),n=-1)
@@ -27,7 +27,7 @@ GPA <- fetch(dbSendQuery(mydb,sql),n=-1)
 #WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
 Total_time <- Suggested_Study_Time + Difference
 
-df <- data.frame(Total_time, GPA)
+df <- data.frame(Total_time, Student_info)
 #df <- dbGetQuery(mydb, Query)
 
 Kmeans_model <- kmeans(df, cluster = 6, nstart = 10)
