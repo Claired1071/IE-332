@@ -10,20 +10,25 @@ Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
 sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
 Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
+sql <- sprintf("SELECT email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
+Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
+
 sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE email='%s'", email)
 GPA <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
-sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
-Year <- fetch(dbSendQuery(mydb,sql),n=-1)
+#sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
+#Year <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT Major FROM Student WHERE email='%s'", email)
-Major <- fetch(dbSendQuery(mydb,sql),n=-1)
+#sql <- sprintf("SELECT Major FROM Student WHERE email='%s'", email)
+#Major <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 #Query <- SELECT (SELECT A.Suggested_Study_Time) + (SELECT F.Feedback_morehours) - (SELECT F.Feedback_lesshours) AS total_time, S.GPA, S.Year, S.Major 
-FROM Student S, Feedback F, Assignment A
-WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
-#Total_time <- Suggested_Study_Time + Feedback_morehours – Feedback_lesshours
-df <- dbGetQuery(mydb, Query)
+#FROM Student S, Feedback F, Assignment A
+#WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
+Total_time <- Suggested_Study_Time + Difference
+
+df <- data.frame(Total_time, GPA)
+#df <- dbGetQuery(mydb, Query)
 
 Kmeans_model <- kmeans(df, cluster = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
