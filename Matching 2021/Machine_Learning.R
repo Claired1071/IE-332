@@ -11,6 +11,9 @@ More_hours <- fetch(dbSendQuery(mydb,sql),n=-1)
 sql <- sprintf("SELECT Feeback_lesshours FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
 Less_hours <- fetch(dbSendQuery(mydb,sql),n=-1)
 
+sql <- sprintf("SELECT GPA FROM Student WHERE email='%s'", )
+GPA <- fetch(dbSendQuery(mydb,sql),n=-1)
+
 
 
 FROM Student S, Feedback F, Assignment A
