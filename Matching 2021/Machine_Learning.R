@@ -1,16 +1,16 @@
 mydb <- dbConnect(MySQL(), user = ‘g1117490’, password = ‘xxxxxx’, dbname = ‘g1117490’, host = ‘mydb.itap.purdue.edu’)
 on.exit(dbDisconnect(mydb))
 
-sql <- sprintf("SELECT Suggested_Study_Time FROM Assignment WHERE Assignment_Name='%s'", Assignment_Name)
+Assignment_Name <- A1
+Course_ID <- IE 23000-001
+
+sql <- sprintf("SELECT Suggested_Study_Time FROM Assignments WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT Feedback_morehours FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
-More_hours <- fetch(dbSendQuery(mydb,sql),n=-1)
+sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
+Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT Feeback_lesshours FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
-Less_hours <- fetch(dbSendQuery(mydb,sql),n=-1)
-
-sql <- sprintf("SELECT GPA FROM Student WHERE email='%s'", email)
+sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE email='%s'", email)
 GPA <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
@@ -19,7 +19,7 @@ Year <- fetch(dbSendQuery(mydb,sql),n=-1)
 sql <- sprintf("SELECT Major FROM Student WHERE email='%s'", email)
 Major <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-Query <- SELECT (SELECT A.Suggested_Study_Time) + (SELECT F.Feedback_morehours) - (SELECT F.Feedback_lesshours) AS total_time, S.GPA, S.Year, S.Major 
+#Query <- SELECT (SELECT A.Suggested_Study_Time) + (SELECT F.Feedback_morehours) - (SELECT F.Feedback_lesshours) AS total_time, S.GPA, S.Year, S.Major 
 FROM Student S, Feedback F, Assignment A
 WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
 #Total_time <- Suggested_Study_Time + Feedback_morehours – Feedback_lesshours
