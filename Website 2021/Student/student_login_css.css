@@ -1,13 +1,13 @@
 @charset "utf-8";
-/* CSS DOCUMENT */
+/* css file */
 body {
 	height: 100vh;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 1;
-	color: #FFFFFF;
-	background-image: linear-gradient(to bottom, #BDAF94, #60553F);
+	color: #F8F8FF;
+	background: #00BFFF; 
 	text-align: center;
-	font: .75em LucidaGrande, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Geneva, Arial, Helvetica, Tahoma, sans-serif;
+	font: .75em Arial, 'Arial', sans-serif;
 }
 .login-container {
 	position: relative;
@@ -15,7 +15,6 @@ body {
     margin: 0 auto 55px auto;
     width: 400px;
     top: 85px;
-    border: 5px solid black;
     border-radius: 15px;
     padding-bottom: 15px;
 }
@@ -40,7 +39,7 @@ label {
 .input {
 	width: 85%;
     height: 3vh;
-    background: #D5DBE5;
+    background: #F8F8FF;
     font-weight: 600;
 }
 .input:focus {
@@ -50,7 +49,7 @@ label {
 	padding: 2px 30px;
 }
 .new-account {
-	color: white;
+	color: #F8F8FF;
 }
 
 .message {

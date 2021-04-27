@@ -1,19 +1,20 @@
 @charset "utf-8";
-/* CSS DOCUMENT */
+/* css file */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #87CEEB;
+  font-family: Arial, sans-serif;
+  background-color: #1A1A1D;
+  color: #F8F8FF;
   margin: 0;
+  font-style: bold;
 }
 
-  /* Style the header */
+  /* header styling */
 .h1 {
   padding: 0px 40px;
   text-align: center;
   font-size: 35px;
-  color: white;
-  background: black;
-  font-style: bold;
+  color: #F8F8FF;
+  background: #00BFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,15 +35,17 @@ body {
 }
 
 .title {
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
+  font-family: Arial, "Arial", sans-serif;
   font-size: 24px;
   margin: 0;
+    font-style: italic;
 }
 .title-main {
   font-weight: 600;
-  font-family: acumin-pro-semi-condensed, "Times New Roman", sans-serif;
+  font-family: Arial, "Arial", sans-serif;
   font-size: 24px;
   margin: 0;
+    font-style: bold;
 }
      
 .content {
@@ -50,9 +53,9 @@ body {
 }
     
 h1 {
-  background-color: black;
-  color: white;
-  border: none;
+  background-color: #00BFFF;
+  color: #F8F8FF;
+  border-radius: 30px
   position: float;
   text-align: center;
   padding: 1%;
@@ -75,16 +78,15 @@ p {
 }
 
 .button1 {
-	background-color: black;
-	border: none;
-	color: white;
+	background-color: #00BFFF;
+	color: #F8F8FF;
 	padding: 15px 32px;
 	text-align: center;
-	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
+    border-radius: 50px;
 }
 
 table.center {
@@ -94,9 +96,8 @@ table.center {
 }    
 
 f1 {
-background-color: black;
-  color: white;
-  border: none;
+background-color: #00BFFF;
+  color: #F8F8FF;
   font-size: 10px;
   text-align: center;
   padding: 0.5%;

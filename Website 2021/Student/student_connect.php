@@ -1,5 +1,7 @@
 <?php
 
+//referred back to https://www.w3schools.com/php/php_mysql_connect.asp and past labs for creating connection establishment
+
 //Establishing connection to MySQL database
 $servername = "mydb.itap.purdue.edu";
 $username = "g1117490";

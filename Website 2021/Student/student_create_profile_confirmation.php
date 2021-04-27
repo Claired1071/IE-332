@@ -5,17 +5,17 @@
 
 <head>
 	<title>Student Scheduler</title>
-    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/Main/ie.ico"/>
+    <link rel="icon" type="image/ico" href="https://web.ics.purdue.edu/~g1117490/Main/icon.ico"/>
     <link href="student_create_profile_css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header class="h1">
       <div class="left-side">
-        <img class="banner3" src="https://www.flaticon.com/svg/vstatic/svg/4185/4185688.svg?token=exp=1618277116~hmac=cbc9ee8049bc4abca2b26f462e4ad900" style= "width:100px">
+        <img class="banner3" src="https://web.ics.purdue.edu/~g1117490/Main/picture2.png" style= "width:100px">
         <hr class="divider">
         <div class="page-title">
           <p class="title-main">Student Scheduler</p>
-          <p class="title">Redefining student scheduling</p>
+          <p class="title">"Redefining student scheduling"</p>
         </div>
 	    </div>
     </header>
@@ -48,11 +48,12 @@
 	$s_password = $_POST['Password'];
 	$s_fname = $_POST['Fname'];
 	$s_lname = $_POST['Lname'];
-	$s_ID = $_POST['Student_ID'];
 	$s_major = $_POST['Major'];
 	$s_GPA = $_POST['GPA'];
 	$s_courses = $_POST['Courses'];
 	$s_year = $_POST['Year'];
+    $s_sleep_time = $_POST['Sleep_Time'];
+    $s_wake_time = $_POST['Wake_Time'];
 		
 	//checking database if email address is already existent
 	$check = mysqli_query($data_base, "SELECT * FROM Student WHERE Email = '$s_email'");
@@ -60,8 +61,8 @@
 		echo "Account already exists with this email" . "<br>" . "<br>";
 	}else{
 		//Student information stored in database
-		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Major, GPA, Courses, Year)
-		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "')";
+		$sql = "INSERT INTO Student (Email, Password, Fname, Lname, Major, GPA, Courses, Year, Sleep_Time, Wake_Time)
+		VALUES('" . $s_email . "', '" . $s_password . "', '" . $s_fname . "', '" . $s_lname . "', '" . $s_major . "', '" . $s_GPA . "', '" . $s_courses . "', '" . $s_year . "', '" . $s_sleep_time . "','" . $s_wake_time . "')";
 	
 		//directing to Login page
 		if (mysqli_query($data_base, $sql)) {
