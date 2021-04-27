@@ -11,7 +11,7 @@ sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours)
 Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE email='%s'", email)
-GPA <- fetch(dbSendQuery(mydb,sql),n=-1)
+GPA <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
 sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
 Year <- fetch(dbSendQuery(mydb,sql),n=-1)
