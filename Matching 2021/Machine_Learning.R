@@ -7,13 +7,13 @@ Course_ID <- IE 23000-001
 sql <- sprintf("SELECT Suggested_Study_Time FROM Assignments WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
+sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
-Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
+#sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'AND Course_ID ='%s'", Assignment_Name, Course_ID)
+#Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Email IN (SELECT Email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name))
+sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Email IN (SELECT Email FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
 #sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
