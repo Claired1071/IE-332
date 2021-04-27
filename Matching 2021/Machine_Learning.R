@@ -13,7 +13,7 @@ Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 #sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'AND Course_ID ='%s'", Assignment_Name, Course_ID)
 #Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Email IN (SELECT Email FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
+sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Email IN (SELECT Email FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID))
 Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
 #sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
