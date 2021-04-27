@@ -10,10 +10,10 @@ Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
 sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
 Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
+sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'", Assignment_Name)
 Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
 
-sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE email='%s'", email)
+sql <- sprintf("SELECT GPA, Year, Major FROM Feedback INNER JOIN Students ON Email_ID = Email ", Email_ID)
 GPA <- fetch(dbSendQuery(mydb,sql),n=-1) 
 
 #sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
