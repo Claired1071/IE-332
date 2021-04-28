@@ -27,4 +27,8 @@ senior <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 boxplot(c(Freshmen, sophomore, junior, senior),names = c("Freshmen", "Sophomore", "Junior", "Senior" ),  main = "GPA Distribution by Grade Year")
 
-
+all_cons <- dbListConnections(MySQL())
+for (mydb in all_cons){
+  dbDisconnect(mydb)
+#disconnect from database
+}
