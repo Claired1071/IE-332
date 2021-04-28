@@ -32,7 +32,7 @@ Total_time <- rep(Suggested_Time, length(Difference)) + Difference
 
 df <- data.frame(Total_time, Student_info)
 dt <- df[, -4]
-kt <- km[, -3]
+kt <- dt[, -3]
 #df <- dbGetQuery(mydb, Query)
 fviz_nbclust(kt, kmeans, method = "wss")
 
