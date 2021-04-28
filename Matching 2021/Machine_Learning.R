@@ -29,10 +29,12 @@ Total_time <- Suggested_Study_Time + Difference
 
 df <- data.frame(Total_time, Student_info)
 #df <- dbGetQuery(mydb, Query)
+fviz_nbclust(df, kmeans, method = "wss")
 
 Kmeans_model <- kmeans(df, cluster = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
 Cluster_means <- Kmeans_model$centers
+
 
 all_cons <- dbListConnections(MySQL())
 for (mydb in all_cons){
