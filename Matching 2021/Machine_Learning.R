@@ -27,7 +27,7 @@ Student_info <- fetch(dbSendQuery(mydb,sql),n=-1)
 #Query <- SELECT (SELECT A.Suggested_Study_Time) + (SELECT F.Feedback_morehours) - (SELECT F.Feedback_lesshours) AS total_time, S.GPA, S.Year, S.Major 
 #FROM Student S, Feedback F, Assignment A
 #WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
-Total_time <- Suggested_Time + Difference
+Total_time <- rep(Suggested_Time, length(Difference) + Difference
 
 df <- data.frame(Total_time, Student_info)
 #df <- dbGetQuery(mydb, Query)
