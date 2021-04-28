@@ -1,4 +1,5 @@
 require("RMySQL")
+library(factoextra)
 library(RMySQL)
 mydb <- dbConnect(MySQL(), user = 'g1117490', password = 'iegroup9', dbname = 'g1117490', host = 'mydb.itap.purdue.edu')
 on.exit(dbDisconnect(mydb))
@@ -30,10 +31,12 @@ Student_info <- fetch(dbSendQuery(mydb,sql),n=-1)
 Total_time <- rep(Suggested_Time, length(Difference)) + Difference
 
 df <- data.frame(Total_time, Student_info)
+dt <- df[, -4]
+kt <- km[, -3]
 #df <- dbGetQuery(mydb, Query)
-fviz_nbclust(df, kmeans, method = "wss")
+fviz_nbclust(kt, kmeans, method = "wss")
 
-Kmeans_model <- kmeans(df, cluster = 6, nstart = 10)
+Kmeans_model <- kmeans(kt, cluster = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
 Cluster_means <- Kmeans_model$centers
 
