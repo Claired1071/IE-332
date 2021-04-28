@@ -5,7 +5,7 @@ mydb <- dbConnect(MySQL(), user = 'g1117490', password = 'iegroup9', dbname = 'g
 on.exit(dbDisconnect(mydb))
 #database connection
 
-S_ID <- 26
+S_ID <- 2
 #hardcoded student ID, waiting for PHP connection to remove
 
 sql <- sprintf("DELETE FROM Schedules WHERE Student_ID ='%s'", S_ID)
