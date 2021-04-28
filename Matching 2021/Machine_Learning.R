@@ -3,8 +3,8 @@ library(RMySQL)
 mydb <- dbConnect(MySQL(), user = 'g1117490', password = 'iegroup9', dbname = 'g1117490', host = 'mydb.itap.purdue.edu')
 on.exit(dbDisconnect(mydb))
 
-Assignment_Name <- A1
-Course_ID <- IE 23000-001
+Assignment_Name <- 'A1'
+Course_ID <- 'IE 23000-001'
 
 sql <- sprintf("SELECT Suggested_Study_Time FROM Assignments WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
