@@ -1,5 +1,4 @@
 require("RMySQL")
-library(factoextra)
 library(RMySQL)
 mydb <- dbConnect(MySQL(), user = 'g1117490', password = 'iegroup9', dbname = 'g1117490', host = 'mydb.itap.purdue.edu')
 on.exit(dbDisconnect(mydb))
@@ -12,9 +11,6 @@ Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT (SELECT Feedback_morehours) - (SELECT Feedback_lesshours) FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
-
-#sql <- sprintf("SELECT Email FROM Feedback WHERE Assignment_Name='%s'AND Course_ID ='%s'", Assignment_Name, Course_ID)
-#Email_ID <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Student_ID IN (SELECT Student_ID FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s')", Assignment_Name, Course_ID)
 Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
@@ -33,8 +29,6 @@ Total_time <- rep(Suggested_Time, length(Difference)) + Difference
 
 df <- data.frame(Total_time, Student_info)
 dt <- df[, -4]
-#df <- dbGetQuery(mydb, Query)
-fviz_nbclust(dt, kmeans, method = "wss")
 
 Kmeans_model <- kmeans(kt, cluster = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
