@@ -49,7 +49,7 @@ if (New_gpa < Cluster_means[1,2]) {
   } else {
   Predicted_time <- Cluster_means[6,1]
 }
-printf(Predicted_time)
+print(Predicted_time)
 
 all_cons <- dbListConnections(MySQL())
 for (mydb in all_cons){
