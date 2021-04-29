@@ -18,23 +18,23 @@ Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Student_ID IN (SELECT Student_ID FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s')", Assignment_Name, Course_ID)
 Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
+for (i in 1:length(Year)) {
+  if(Year[i] == 'Freshmen') 
+    Year[i] = 1
+  if(Year[i] == 'Sophomore')
+    Year[i] = 2
+  if(Year[i] == 'Junior') 
+    Year[i] = 3
+  if(Year[i] == 'Senior') 
+    Year[i] = 4
+}
 
-#sql <- sprintf("SELECT Year FROM Student WHERE email='%s'", email)
-#Year <- fetch(dbSendQuery(mydb,sql),n=-1)
-
-#sql <- sprintf("SELECT Major FROM Student WHERE email='%s'", email)
-#Major <- fetch(dbSendQuery(mydb,sql),n=-1)
-
-#Query <- SELECT (SELECT A.Suggested_Study_Time) + (SELECT F.Feedback_morehours) - (SELECT F.Feedback_lesshours) AS total_time, S.GPA, S.Year, S.Major 
-#FROM Student S, Feedback F, Assignment A
-#WHERE A.Assignment_Name = F.Assignment_Name AND S.email = F.email
 Total_time <- rep(Suggested_Time, length(Difference)) + Difference
 
 df <- data.frame(Total_time, Student_info)
 dt <- df[, -4]
-kt <- dt[, -3]
 #df <- dbGetQuery(mydb, Query)
-fviz_nbclust(kt, kmeans, method = "wss")
+fviz_nbclust(dt, kmeans, method = "wss")
 
 Kmeans_model <- kmeans(kt, cluster = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
