@@ -18,15 +18,15 @@ Difference <- fetch(dbSendQuery(mydb,sql),n=-1)
 
 sql <- sprintf("SELECT GPA, Year, Major FROM Student WHERE Student_ID IN (SELECT Student_ID FROM Feedback WHERE Assignment_Name='%s' AND Course_ID ='%s')", Assignment_Name, Course_ID)
 Student_info <- fetch(dbSendQuery(mydb,sql),n=-1) 
-for (i in 1:length(Year)) {
-  if(Year[i] == 'Freshmen') 
-    Year[i] = 1
-  if(Year[i] == 'Sophomore')
-    Year[i] = 2
-  if(Year[i] == 'Junior') 
-    Year[i] = 3
-  if(Year[i] == 'Senior') 
-    Year[i] = 4
+for (i in 1:length(Student_info$Year)) {
+  if(Student_info$Year[i] == 'Freshmen') 
+    Student_info$Year[i] = 1
+  if(Student_info$Year[i] == 'Sophomore')
+    Student_info$Year[i] = 2
+  if(Student_info$Year[i] == 'Junior') 
+    Student_info$Year[i] = 3
+  if(Student_info$Year[i] == 'Senior') 
+    Student_info$Year[i] = 4
 }
 
 Total_time <- rep(Suggested_Time, length(Difference)) + Difference
