@@ -5,6 +5,7 @@ on.exit(dbDisconnect(mydb))
 
 Assignment_Name <- 'A1'
 Course_ID <- 'IE 23000-001'
+New_gpa <- 3.15
 
 sql <- sprintf("SELECT Suggested_Study_Time FROM Assignments WHERE Assignment_Name='%s' AND Course_ID ='%s'", Assignment_Name, Course_ID)
 Suggested_Time <- fetch(dbSendQuery(mydb,sql),n=-1)
@@ -34,6 +35,21 @@ Kmeans_model <- kmeans(kt, centers = 6, nstart = 10)
 aggregate(df, by = list(cluster=Kmeans_model$centers), mean)
 Cluster_means <- Kmeans_model$centers
 
+
+if(New_gpa < Cluster_means[1,2])
+  Predicted_time <- Cluster_means[1,1]
+elseif((New_gpa >= Cluster_means[1,2]) && (New_gpa <= Cluster_means[2,2]))
+  Predicted_time <- Cluster_means[2,1]
+elseif((New_gpa > Cluster_means[2,2]) && (New_gpa <= Cluster_means[3,2]))
+  Predicted_time <- Cluster_means[3,1]
+elseif((New_gpa > Cluster_means[3,2]) && (New_gpa <= Cluster_means[4,2]))
+  Predicted_time <- Cluster_means[4,1]
+elseif((New_gpa > Cluster_means[4,2]) && (New_gpa <= Cluster_means[5,2]))
+  Predicted_time <- Cluster_means[5,1]
+else((New_gpa > Cluster_means[5,2])
+  Predicted_time <- Cluster_means[6,1]
+   
+printf(Predicted_time)
 
 all_cons <- dbListConnections(MySQL())
 for (mydb in all_cons){
