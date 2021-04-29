@@ -36,19 +36,19 @@ aggregate(df, by = list(cluster=Kmeans_model$centers), mean)
 Cluster_means <- Kmeans_model$centers
 
 
-if(New_gpa < Cluster_means[1,2])
+if(New_gpa < Cluster_means[1,2]) {
   Predicted_time <- Cluster_means[1,1]
-elseif((New_gpa >= Cluster_means[1,2]) && (New_gpa <= Cluster_means[2,2]))
+  } elseif((New_gpa >= Cluster_means[1,2]) && (New_gpa <= Cluster_means[2,2])) {
   Predicted_time <- Cluster_means[2,1]
-elseif((New_gpa > Cluster_means[2,2]) && (New_gpa <= Cluster_means[3,2]))
-  Predicted_time <- Cluster_means[3,1]
-elseif((New_gpa > Cluster_means[3,2]) && (New_gpa <= Cluster_means[4,2]))
+  } elseif((New_gpa > Cluster_means[2,2]) && (New_gpa <= Cluster_means[3,2])) {
+  Predicted_time <- Cluster_means[3,1] 
+  } elseif((New_gpa > Cluster_means[3,2]) && (New_gpa <= Cluster_means[4,2])) {
   Predicted_time <- Cluster_means[4,1]
-elseif((New_gpa > Cluster_means[4,2]) && (New_gpa <= Cluster_means[5,2]))
+  } elseif((New_gpa > Cluster_means[4,2]) && (New_gpa <= Cluster_means[5,2])) {
   Predicted_time <- Cluster_means[5,1]
-else((New_gpa > Cluster_means[5,2])
+  } else((New_gpa > Cluster_means[5,2]) {
   Predicted_time <- Cluster_means[6,1]
-   
+}
 printf(Predicted_time)
 
 all_cons <- dbListConnections(MySQL())
