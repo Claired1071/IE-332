@@ -30,8 +30,8 @@ Total_time <- rep(Suggested_Time, length(Difference)) + Difference
 df <- data.frame(Total_time, Student_info)
 dt <- df[, -4]
 
-Kmeans_model <- kmeans(kt, cluster = 6, nstart = 10)
-aggregate(df, by = list(cluster=Kmeans_model$cluster), mean)
+Kmeans_model <- kmeans(kt, centers = 6, nstart = 10)
+aggregate(df, by = list(cluster=Kmeans_model$centers), mean)
 Cluster_means <- Kmeans_model$centers
 
 
